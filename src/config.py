@@ -45,19 +45,3 @@ P2_KEYS = {
     pygame.K_LEFT: LEFT,
     pygame.K_RIGHT: RIGHT
 }
-
-# Controles jogador 3 (IJKL)
-P3_KEYS = {
-    pygame.K_i: UP,
-    pygame.K_k: DOWN,
-    pygame.K_j: LEFT,
-    pygame.K_l: RIGHT
-}
-
-# Controles jogador 4 (TFGH)
-P4_KEYS = {
-    pygame.K_t: UP,
-    pygame.K_g: DOWN,
-    pygame.K_f: LEFT,
-    pygame.K_h: RIGHT
-}
