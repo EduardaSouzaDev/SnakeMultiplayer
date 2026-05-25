@@ -1,5 +1,12 @@
 from config import GRID_WIDTH, GRID_HEIGHT
+import pygame
+import random
 
+#arquivos de som
+snakeEat = pygame.mixer.Sound('assets/snakeEat.wav')
+
+pygame.init()
+pygame.mixer.init()
 
 def check_wall_collision(snake):
     """Verifica se a cobra colidiu com as paredes."""
@@ -52,6 +59,7 @@ def check_food_collision(snake, food, all_snakes):
     
     if snake.body[0] == food.position:
         snake.eat()
+        snakeEat.play()
         food.respawn(all_snakes)
 
 
