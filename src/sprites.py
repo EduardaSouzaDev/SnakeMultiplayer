@@ -1,3 +1,4 @@
+import random
 import pygame
 from config import CELL_SIZE
 from utils import random_position
@@ -39,6 +40,7 @@ class Snake:
     def eat(self):
         self.grow = True
         self.score += 1
+        
 
 
 class Food:

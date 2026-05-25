@@ -1,4 +1,5 @@
 import pygame
+import random
 import sys
 from config import *
 from sprites import Snake, Food
@@ -9,12 +10,14 @@ from systems import (
     check_food_collision,
     update_direction
 )
-
+#som de gameover
+gameover = pygame.mixer.Sound('assets/gameover.wav')
 
 class Game:
     def __init__(self):
         pygame.init()
-        
+        pygame.mixer.init()
+
         # Configuração da tela
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("Snake Multiplayer (até 4 jogadores) - Atari Style")
@@ -231,6 +234,7 @@ class Game:
             return
         
         self.game_over = True
+        gameover.play()
         
         # Determinar vencedor
         if len(alive_players) == 1:
